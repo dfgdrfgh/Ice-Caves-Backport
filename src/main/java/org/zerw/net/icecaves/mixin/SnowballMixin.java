@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class SnowballMixin {
    @Inject(method = "onHitEntity", at = @At("TAIL"))
    private void iceCaves$knockbackOnHit(class_3966 hitResult, CallbackInfo ci) {
-      class_1680 self = (class_1680)this;
+      class_1680 self = (class_1680)(Object)this;
       class_1937 level = self.method_37908();
       if (!level.method_8608()) {
          if (hitResult.method_17782() instanceof class_1309 living) {

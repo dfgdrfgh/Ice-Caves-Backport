@@ -26,7 +26,7 @@ public class FrostbiteZombieRenderer extends class_968<FrostbiteZombie, class_62
       this.method_4046(new FrostbiteOuterLayer(this, context.method_32170()));
    }
 
-   public void render(FrostbiteZombie entity, float entityYaw, float partialTicks, class_4587 poseStack, class_4597 buffer, int packedLight) {
+   public void method_4054(FrostbiteZombie entity, float entityYaw, float partialTicks, class_4587 poseStack, class_4597 buffer, int packedLight) {
       this.field_4737 = entity.method_6109() ? this.babyModel : this.adultModel;
       super.method_4054(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
    }
@@ -35,7 +35,7 @@ public class FrostbiteZombieRenderer extends class_968<FrostbiteZombie, class_62
       this.field_4673 = entity.method_6109() ? 0.25F : 0.5F;
    }
 
-   public class_2960 getTextureLocation(FrostbiteZombie entity) {
+   public class_2960 method_3931(FrostbiteZombie entity) {
       return entity.method_6109() ? BABY_TEXTURE : TEXTURE;
    }
 }

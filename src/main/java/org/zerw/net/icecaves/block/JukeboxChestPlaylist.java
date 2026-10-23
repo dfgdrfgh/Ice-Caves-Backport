@@ -22,7 +22,7 @@ public final class JukeboxChestPlaylist {
    }
 
    public static <T extends class_2586> class_5558<T> vanillaTicker() {
-      return class_2619::method_44370;
+      return (world, pos, state, blockEntity) -> class_2619.method_44370(world, pos, state, (class_2619)(Object)blockEntity);
    }
 
    public static void tick(class_1937 level, class_2338 pos, class_2619 jukebox, JukeboxChestPlaylist.Access access) {

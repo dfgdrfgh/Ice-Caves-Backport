@@ -29,7 +29,7 @@ public final class ModEntities {
    }
 
    public static class_1299<IceBall> createIceBall() {
-      return class_1300.method_5903(IceBall::new, class_1311.field_17715)
+      return class_1300.<IceBall>method_5903((type, level) -> new IceBall(type, level), class_1311.field_17715)
          .method_17687(0.25F, 0.25F)
          .method_27299(4)
          .method_27300(10)

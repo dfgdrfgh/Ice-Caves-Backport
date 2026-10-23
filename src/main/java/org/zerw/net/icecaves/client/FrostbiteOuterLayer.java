@@ -19,7 +19,7 @@ public class FrostbiteOuterLayer<T extends FrostbiteZombie> extends class_3887<T
       this.model = new class_623(models.method_32072(class_5602.field_27557));
    }
 
-   public void render(
+   public void method_4199(
       class_4587 poseStack,
       class_4597 buffer,
       int packedLight,

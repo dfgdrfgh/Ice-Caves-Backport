@@ -164,47 +164,51 @@ public final class IceCavesFabric implements ModInitializer {
          builder.method_59705(class_1847.field_8999, ICE_BALL_ITEM, FREEZING_POTION);
          builder.method_59705(FREEZING_POTION, class_1802.field_8725, LONG_FREEZING_POTION);
       });
-      class_1761 tab = FabricItemGroup.builder()
-         .method_47321(ModCreativeTabs.title())
-         .method_47320(() -> ModCreativeTabs.icon(ICE_CRYSTAL_ITEM))
-         .method_47317(
-            (params, output) -> {
-               for (class_1799 stack : ModCreativeTabs.contents(
-                  ICE_CRYSTAL_ITEM,
-                  ICICLE_ITEM,
-                  BRITTLE_ICE_ITEM,
-                  PACKED_ICE_BRICKS_ITEM,
-                  PACKED_ICE_BRICK_STAIRS_ITEM,
-                  PACKED_ICE_BRICK_SLAB_ITEM,
-                  PACKED_ICE_BRICK_WALL_ITEM,
-                  CHISELED_PACKED_ICE_ITEM,
-                  ICE_DOOR_ITEM,
-                  ICE_BALL_ITEM,
-                  FROSTBITE_SPAWN_EGG,
-                  FREEZING_POTION,
-                  LONG_FREEZING_POTION
-               )) {
-                  output.method_45420(stack);
+      // TrueVanillaBackport exposes these items through its own creative inventory.
+      // Do not register a second standalone Ice Caves tab when integrated.
+      if (!net.fabricmc.loader.api.FabricLoader.getInstance().isModLoaded("vanillabackport")) {
+         class_1761 tab = FabricItemGroup.builder()
+            .method_47321(ModCreativeTabs.title())
+            .method_47320(() -> ModCreativeTabs.icon(ICE_CRYSTAL_ITEM))
+            .method_47317(
+               (params, output) -> {
+                  for (class_1799 stack : ModCreativeTabs.contents(
+                     ICE_CRYSTAL_ITEM,
+                     ICICLE_ITEM,
+                     BRITTLE_ICE_ITEM,
+                     PACKED_ICE_BRICKS_ITEM,
+                     PACKED_ICE_BRICK_STAIRS_ITEM,
+                     PACKED_ICE_BRICK_SLAB_ITEM,
+                     PACKED_ICE_BRICK_WALL_ITEM,
+                     CHISELED_PACKED_ICE_ITEM,
+                     ICE_DOOR_ITEM,
+                     ICE_BALL_ITEM,
+                     FROSTBITE_SPAWN_EGG,
+                     FREEZING_POTION,
+                     LONG_FREEZING_POTION
+                  )) {
+                     output.method_45420(stack);
+                  }
                }
-            }
-         )
-         .method_47324();
-      class_2378.method_39197(class_7923.field_44687, ModCreativeTabs.TAB_KEY, tab);
-      ItemGroupEvents.modifyEntriesEvent(class_7706.field_40743).register((ModifyEntries)entries -> {
-         entries.method_45421(ICE_CRYSTAL_ITEM);
-         entries.method_45421(ICICLE_ITEM);
-         entries.method_45421(BRITTLE_ICE_ITEM);
-      });
-      ItemGroupEvents.modifyEntriesEvent(class_7706.field_40195).register((ModifyEntries)entries -> {
-         entries.method_45421(PACKED_ICE_BRICKS_ITEM);
-         entries.method_45421(PACKED_ICE_BRICK_STAIRS_ITEM);
-         entries.method_45421(PACKED_ICE_BRICK_SLAB_ITEM);
-         entries.method_45421(PACKED_ICE_BRICK_WALL_ITEM);
-         entries.method_45421(CHISELED_PACKED_ICE_ITEM);
-         entries.method_45421(ICE_DOOR_ITEM);
-      });
-      ItemGroupEvents.modifyEntriesEvent(class_7706.field_40205).register((ModifyEntries)entries -> entries.method_45421(FROSTBITE_SPAWN_EGG));
-      ItemGroupEvents.modifyEntriesEvent(class_7706.field_41062).register((ModifyEntries)entries -> entries.method_45421(ICE_BALL_ITEM));
+            )
+            .method_47324();
+         class_2378.method_39197(class_7923.field_44687, ModCreativeTabs.TAB_KEY, tab);
+         ItemGroupEvents.modifyEntriesEvent(class_7706.field_40743).register((ModifyEntries)entries -> {
+            entries.method_45421(ICE_CRYSTAL_ITEM);
+            entries.method_45421(ICICLE_ITEM);
+            entries.method_45421(BRITTLE_ICE_ITEM);
+         });
+         ItemGroupEvents.modifyEntriesEvent(class_7706.field_40195).register((ModifyEntries)entries -> {
+            entries.method_45421(PACKED_ICE_BRICKS_ITEM);
+            entries.method_45421(PACKED_ICE_BRICK_STAIRS_ITEM);
+            entries.method_45421(PACKED_ICE_BRICK_SLAB_ITEM);
+            entries.method_45421(PACKED_ICE_BRICK_WALL_ITEM);
+            entries.method_45421(CHISELED_PACKED_ICE_ITEM);
+            entries.method_45421(ICE_DOOR_ITEM);
+         });
+         ItemGroupEvents.modifyEntriesEvent(class_7706.field_40205).register((ModifyEntries)entries -> entries.method_45421(FROSTBITE_SPAWN_EGG));
+         ItemGroupEvents.modifyEntriesEvent(class_7706.field_41062).register((ModifyEntries)entries -> entries.method_45421(ICE_BALL_ITEM));
+      }
       BiomeModifications.addFeature(BiomeSelectors.tag(IceCaveSpawnControl.HAS_ICE_CAVES), class_2895.field_13177, ModFeatures.ICE_CAVE_PLACED_KEY);
       BiomeModifications.addSpawn(BiomeSelectors.tag(IceCaveSpawnControl.HAS_ICE_CAVES), class_1311.field_6302, FROSTBITE, 100, 1, 3);
       BiomeModifications.addSpawn(BiomeSelectors.tag(IceCaveSpawnControl.HAS_ICE_CAVES), class_1311.field_6302, class_1299.field_6098, 15, 1, 2);

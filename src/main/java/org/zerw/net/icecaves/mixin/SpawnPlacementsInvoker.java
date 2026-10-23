@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 
 @Mixin(class_1317.class)
 public interface SpawnPlacementsInvoker {
-   @Invoker("register")
+   @Invoker("method_20637")
    static <T extends class_1308> void invokeRegister(class_1299<T> entityType, class_9168 placementType, class_2903 heightmapType, class_4306<T> predicate) {
       throw new AssertionError();
    }

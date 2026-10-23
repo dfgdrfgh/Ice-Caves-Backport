@@ -13,7 +13,7 @@ import org.zerw.net.icecaves.registry.ModPotions;
 @Mixin(class_1876.class)
 public abstract class TippedArrowRecipeMixin {
    @Inject(
-      method = "assemble(Lnet/minecraft/world/item/crafting/CraftingInput;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/ItemStack;",
+      method = "method_17740",
       at = @At("RETURN")
    )
    private void iceCaves$tagFreezingIcon(class_9694 input, class_7874 registries, CallbackInfoReturnable<class_1799> cir) {

@@ -14,7 +14,7 @@ import org.zerw.net.icecaves.worldgen.IceCaveSpawnControl;
 
 @Mixin(class_1317.class)
 public abstract class SpawnPlacementsMixin {
-   @Inject(method = "checkSpawnRules", at = @At("HEAD"), cancellable = true)
+   @Inject(method = "method_20638", at = @At("HEAD"), cancellable = true)
    private static void iceCaves$adjustIceCaveSpawns(
       class_1299<?> entityType, class_5425 level, class_3730 spawnReason, class_2338 pos, class_5819 random, CallbackInfoReturnable<Boolean> cir
    ) {

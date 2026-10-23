@@ -1,6 +1,5 @@
 package org.zerw.net.icecaves.effect;
 
-import net.minecraft.class_1267;
 import net.minecraft.class_1291;
 import net.minecraft.class_1309;
 import net.minecraft.class_4081;
@@ -15,27 +14,14 @@ public final class FreezingMobEffect extends class_1291 {
 
    public void method_52520(class_1309 mob, int amplification) {
       if (mob.method_32316()) {
-         forceFullFreeze(mob);
+         increaseFreeze(mob, amplification);
       }
    }
 
    public boolean method_5572(class_1309 mob, int amplification) {
-      if (!mob.method_32316()) {
-         return true;
+      if (mob.method_32316()) {
+         increaseFreeze(mob, amplification);
       }
-
-      forceFullFreeze(mob);
-      if (mob.method_37908().method_8608()) {
-         return true;
-      }
-
-      if (mob.field_6012 % 20 == 0) {
-         float damage = damageForDifficulty(mob.method_37908().method_8407());
-         if (damage > 0.0F) {
-            mob.method_5643(mob.method_48923().method_48836(), damage);
-         }
-      }
-
       return true;
    }
 
@@ -43,18 +29,10 @@ public final class FreezingMobEffect extends class_1291 {
       return true;
    }
 
-   private static void forceFullFreeze(class_1309 mob) {
-      mob.method_32319(true);
-      mob.method_32317(mob.method_32315());
-   }
-
-   private static float damageForDifficulty(class_1267 difficulty) {
-      return switch (difficulty) {
-         case field_5801 -> 0.0F;
-         case field_5805 -> 1.0F;
-         case field_5802 -> 2.0F;
-         case field_5807 -> 3.0F;
-         default -> throw new MatchException(null, null);
-      };
+   private static void increaseFreeze(class_1309 mob, int amplification) {
+      // Reproduce progressive freezing without applying an extra source of freeze damage.
+      int current = mob.method_32312();
+      int threshold = mob.method_32315();
+      mob.method_32317(Math.min(threshold + 3 + Math.max(0, amplification), current + 2));
    }
 }

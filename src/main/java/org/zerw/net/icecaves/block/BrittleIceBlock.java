@@ -68,7 +68,7 @@ public class BrittleIceBlock extends class_2248 {
    }
 
    private static boolean isWeight(class_1297 entity) {
-      return entity instanceof class_1309 living && living.method_5805() && !living.method_7325() && living.method_24828();
+      return !(entity instanceof org.zerw.net.icecaves.entity.FrostbiteZombie) && entity instanceof class_1309 living && living.method_5805() && !living.method_7325() && living.method_24828();
    }
 
    private static boolean hasWeight(class_3218 level, class_2338 pos) {

@@ -1,0 +1,35 @@
+plugins {
+    id 'fabric-loom' version '1.9.2'
+    id 'maven-publish'
+}
+group = 'org.zerw.net'
+version = '1.0.1-merge-alpha'
+base {
+    archivesName = 'ice-caves-backport-fabric'
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:intermediary:${project.minecraft_version}"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
+}
+sourceSets.main.java {
+    exclude '**/*_forge.java', '**/*_neoforge.java'
+    exclude '**/IceCavesForge.java', '**/IceCavesNeoForge.java'
+    exclude '**/IceCavesForgeClient.java', '**/IceCavesNeoForgeClient.java'
+    exclude '**/forgelike/**', '**/neoforge/**'
+}
+tasks.named('processResources') {
+    exclude 'META-INF/**', '**/*.forge.mixins.json', '**/*.neoforge.mixins.json'
+    exclude 'data/ice_caves/forge/**', 'data/ice_caves/neoforge/**'
+}
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+}
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
+tasks.named('jar') { from('src/main/resources/LICENSE_Ice Caves') { into 'META-INF' } }

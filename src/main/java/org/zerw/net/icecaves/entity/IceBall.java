@@ -56,6 +56,11 @@ public class IceBall extends class_3857 {
       super.method_7454(hitResult);
       if (!this.method_37908().method_8608()) {
          if (hitResult.method_17782() instanceof class_1309 living) {
+            // Match the snapshot's speed-dependent impact while preserving the Freezing effect.
+            float damage = Math.max(0.0F, (float)Math.ceil(this.method_18798().method_1033() * 1.395));
+            if (damage > 0.0F) {
+               living.method_5643(this.method_48923().method_48811(this, this.method_24921()), damage);
+            }
             ModEffects.applyFreezing(living, 20, this.method_24921());
             class_3414 sound = ModSounds.iceBallHit();
             if (sound != null) {

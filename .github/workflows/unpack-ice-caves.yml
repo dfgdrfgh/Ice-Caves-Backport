@@ -1,0 +1,56 @@
+name: Unpack Ice Caves sources (temporary)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/unpack-ice-caves.yml'
+      - 'IceCaves-1.21.1.zip'
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify and unpack decompiled sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git hash-object IceCaves-1.21.1.zip)" = "9931f92ba850b5c6c5da546cde723df74b27fab4"
+          python3 - <<'PY'
+          import pathlib, stat, zipfile
+          source = pathlib.Path("IceCaves-1.21.1.zip")
+          root = "IceCaves-1.21.1-decompiled"
+          count = java_count = resources_count = 0
+          with zipfile.ZipFile(source) as archive:
+              files = [i for i in archive.infolist() if not i.is_dir()]
+              if len(files) != 302 or archive.testzip() is not None:
+                  raise RuntimeError("Archive integrity or file count check failed")
+              for item in files:
+                  name = pathlib.PurePosixPath(item.filename)
+                  if not name.parts or name.parts[0] != root or ".." in name.parts or stat.S_ISLNK(item.external_attr >> 16):
+                      raise RuntimeError("Unexpected or unsafe archive entry: " + item.filename)
+                  relative = pathlib.Path(*name.parts[1:])
+                  if str(relative) not in ("README.md", "DECOMPILATION_REPORT.json") and not (len(relative.parts) >= 3 and relative.parts[0:2] == ("src", "main")):
+                      raise RuntimeError("Unexpected archive path: " + item.filename)
+                  if relative.exists():
+                      raise RuntimeError("Refusing to overwrite existing repository file: " + str(relative))
+              for item in files:
+                  relative = pathlib.Path(*pathlib.PurePosixPath(item.filename).parts[1:])
+                  relative.parent.mkdir(parents=True, exist_ok=True)
+                  relative.write_bytes(archive.read(item))
+                  count += 1
+                  java_count += relative.suffix == ".java"
+                  resources_count += "resources" in relative.parts
+          if java_count != 90 or resources_count < 200:
+              raise RuntimeError(f"Unexpected extracted source counts: {java_count} Java, {resources_count} resources")
+          print(f"Extracted {count} files: {java_count} Java files and {resources_count} resource files.")
+          PY
+          git rm -- IceCaves-1.21.1.zip
+          git add -A
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Extract decompiled Ice Caves source and remove ZIP"
+          git push origin HEAD:main

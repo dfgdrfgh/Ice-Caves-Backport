@@ -20,7 +20,7 @@ import org.zerw.net.icecaves.block.JukeboxChestPlaylist;
 public class JukeboxBlockPlaylistMixin {
    @Inject(method = "getTicker", at = @At("HEAD"), cancellable = true)
    private <T extends class_2586> void iceCaves$alwaysTick(class_1937 level, class_2680 state, class_2591<T> type, CallbackInfoReturnable<class_5558<T>> cir) {
-      if (type == class_2591.field_11907) {
+      if (IceCavesMixinLogic.isJukeboxTicker(type)) {
          cir.setReturnValue(JukeboxChestPlaylist.vanillaTicker());
       }
    }

@@ -17,6 +17,6 @@ public abstract class TippedArrowRecipeMixin {
       at = @At("RETURN")
    )
    private void iceCaves$tagFreezingIcon(class_9694 input, class_7874 registries, CallbackInfoReturnable<class_1799> cir) {
-      ModPotions.applyFreezingIcon((class_1799)cir.getReturnValue());
+      IceCavesMixinLogic.tagFreezingStack(cir.getReturnValue());
    }
 }

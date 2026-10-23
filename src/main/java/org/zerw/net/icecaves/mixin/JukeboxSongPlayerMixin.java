@@ -14,7 +14,7 @@ import org.zerw.net.icecaves.block.JukeboxChestPlaylist;
 public class JukeboxSongPlayerMixin {
    @Inject(method = "spawnMusicParticles", at = @At("HEAD"), cancellable = true)
    private static void iceCaves$sideNotes(class_1936 level, class_2338 pos, CallbackInfo ci) {
-      if (level instanceof class_1937 real && JukeboxChestPlaylist.spawnSideNotes(real, pos)) {
+      if (IceCavesMixinLogic.spawnPlaylistNotes(level, pos)) {
          ci.cancel();
       }
    }

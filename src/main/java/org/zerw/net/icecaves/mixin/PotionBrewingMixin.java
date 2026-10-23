@@ -12,6 +12,6 @@ import org.zerw.net.icecaves.registry.ModPotions;
 public abstract class PotionBrewingMixin {
    @Inject(method = "mix", at = @At("RETURN"))
    private void iceCaves$tagFreezingIcon(class_1799 reagent, class_1799 potionStack, CallbackInfoReturnable<class_1799> cir) {
-      ModPotions.applyFreezingIcon((class_1799)cir.getReturnValue());
+      IceCavesMixinLogic.tagFreezingStack(cir.getReturnValue());
    }
 }

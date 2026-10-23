@@ -133,7 +133,7 @@ public final class IceCavesFabric implements ModInitializer {
       ICE_CAVE_FEATURE = (IceCaveFeature)class_2378.method_10230(class_7923.field_41144, ModFeatures.ICE_CAVE_ID, ModFeatures.createIceCave());
       FROSTBITE = (class_1299<FrostbiteZombie>)class_2378.method_10230(class_7923.field_41177, ModEntities.FROSTBITE_ID, ModEntities.createFrostbite());
       FabricDefaultAttributeRegistry.register(FROSTBITE, FrostbiteZombie.createAttributes());
-      SpawnPlacementsInvoker.invokeRegister(FROSTBITE, class_9169.field_48745, class_2903.field_13203, IceCaveSpawnControl::checkFrostbiteSpawnRules);
+      SpawnPlacementsInvoker.registerFrostbitePlacement(FROSTBITE, class_9169.field_48745, class_2903.field_13203, IceCaveSpawnControl::checkFrostbiteSpawnRules);
       FROSTBITE_SPAWN_EGG = (class_1826)class_2378.method_10230(
          class_7923.field_41178, ModItems.FROSTBITE_SPAWN_EGG_ID, ModItems.createFrostbiteSpawnEgg(FROSTBITE)
       );

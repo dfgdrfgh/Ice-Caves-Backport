@@ -15,7 +15,7 @@ public abstract class SnowLayerBlockMixin {
    @Inject(method = "method_9558", at = @At("HEAD"), cancellable = true)
    private void iceCaves$surviveOnPackedIce(class_2680 state, class_4538 level,
          class_2338 pos, CallbackInfoReturnable<Boolean> cir) {
-      if (level.method_8320(pos.method_10074()).method_27852(class_2246.field_10225)) {
+      if (IceCavesMixinLogic.canSupportSnowOnPackedIce(level, pos)) {
          cir.setReturnValue(true);
       }
    }

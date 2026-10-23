@@ -13,8 +13,7 @@ import org.zerw.net.icecaves.worldgen.IceCaveSpawnControl;
 public abstract class MobSpawnMixin {
    @Inject(method = "checkSpawnRules", at = @At("HEAD"), cancellable = true)
    private void iceCaves$blockNonFrostbiteInIceCaves(class_1936 level, class_3730 spawnReason, CallbackInfoReturnable<Boolean> cir) {
-      class_1308 self = (class_1308)(Object)this;
-      if (IceCaveSpawnControl.shouldBlockMonsterSpawn(self, level, spawnReason)) {
+      if (IceCavesMixinLogic.preventMobSpawn((class_1308)(Object)this, level, spawnReason)) {
          cir.setReturnValue(false);
       }
    }

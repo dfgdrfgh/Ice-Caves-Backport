@@ -15,8 +15,7 @@ import org.zerw.net.icecaves.registry.ModSounds;
 public class IceBlockMixin {
    @Inject(method = "getSoundType", at = @At("HEAD"), cancellable = true)
    private void iceCaves$useCustomIceSounds(class_2680 state, CallbackInfoReturnable<class_2498> cir) {
-      class_2248 block = state.method_26204();
-      if (block == class_2246.field_10295 || block == class_2246.field_10225 || block == class_2246.field_10384) {
+      if (IceCavesMixinLogic.hasIceSound(state)) {
          cir.setReturnValue(ModSounds.ICE);
       }
    }

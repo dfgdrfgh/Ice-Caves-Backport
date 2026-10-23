@@ -16,8 +16,6 @@ public class NoteParticleMixin {
    private void iceCaves$randomNoteSize(
       class_2400 type, class_638 level, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed, CallbackInfoReturnable<class_703> cir
    ) {
-      if (ySpeed > 0.0 && cir.getReturnValue() instanceof class_3940 particle) {
-         particle.method_3087((float)ySpeed);
-      }
+      IceCavesNoteParticleLogic.updateSize(cir.getReturnValue(), ySpeed);
    }
 }

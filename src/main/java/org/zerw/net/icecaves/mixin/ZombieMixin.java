@@ -19,7 +19,11 @@ public abstract class ZombieMixin {
 
    @Inject(method = "method_5773", at = @At("TAIL"))
    private void iceCaves$powderSnowConversion(CallbackInfo ci) {
-      class_1642 zombie = (class_1642)(Object)this;
+      iceCaves$updateConversion((class_1642)(Object)this);
+   }
+
+   @Unique
+   private void iceCaves$updateConversion(class_1642 zombie) {
       if (zombie instanceof FrostbiteZombie || !(zombie.method_37908() instanceof class_3218)
             || !zombie.method_5805() || zombie.method_5987()) {
          return;

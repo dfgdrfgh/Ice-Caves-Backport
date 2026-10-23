@@ -26,23 +26,17 @@ public class JukeboxPlaylistMixin implements JukeboxChestPlaylist.Access {
 
    @Inject(method = "tick", at = @At("TAIL"))
    private static void iceCaves$playlistTick(class_1937 level, class_2338 pos, class_2680 state, class_2619 jukebox, CallbackInfo ci) {
-      JukeboxChestPlaylist.tick(level, pos, jukebox, (JukeboxChestPlaylist.Access)jukebox);
+      IceCavesMixinLogic.tickPlaylist(level, pos, jukebox);
    }
 
    @Inject(method = "saveAdditional", at = @At("TAIL"))
    private void iceCaves$savePlaylist(class_2487 tag, class_7874 registries, CallbackInfo ci) {
-      tag.method_10569("IceCavesSource", this.iceCaves$sourceSlot);
-      tag.method_10569("IceCavesNext", this.iceCaves$nextStart);
-      tag.method_10569("IceCavesCooldown", this.iceCaves$cooldown);
-      tag.method_10556("IceCavesHolding", this.iceCaves$holding);
+      IceCavesMixinLogic.writePlaylistState(tag, this);
    }
 
    @Inject(method = "loadAdditional", at = @At("TAIL"))
    private void iceCaves$loadPlaylist(class_2487 tag, class_7874 registries, CallbackInfo ci) {
-      this.iceCaves$sourceSlot = tag.method_10545("IceCavesSource") ? tag.method_10550("IceCavesSource") : -1;
-      this.iceCaves$nextStart = tag.method_10550("IceCavesNext");
-      this.iceCaves$cooldown = tag.method_10550("IceCavesCooldown");
-      this.iceCaves$holding = tag.method_10577("IceCavesHolding");
+      IceCavesMixinLogic.readPlaylistState(tag, this);
    }
 
    @Override

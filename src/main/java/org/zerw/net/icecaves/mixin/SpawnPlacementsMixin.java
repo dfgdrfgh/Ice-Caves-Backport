@@ -18,12 +18,9 @@ public abstract class SpawnPlacementsMixin {
    private static void iceCaves$adjustIceCaveSpawns(
       class_1299<?> entityType, class_5425 level, class_3730 spawnReason, class_2338 pos, class_5819 random, CallbackInfoReturnable<Boolean> cir
    ) {
-      if (IceCaveSpawnControl.shouldBlockMonsterType(entityType, level, pos, spawnReason)) {
-         cir.setReturnValue(false);
-      } else {
-         if (IceCaveSpawnControl.shouldAllowCaveStraySpawn(entityType, level, pos, spawnReason, random)) {
-            cir.setReturnValue(true);
-         }
+      Boolean override = IceCavesMixinLogic.spawnPlacementOverride(entityType, level, spawnReason, pos, random);
+      if (override != null) {
+         cir.setReturnValue(override);
       }
    }
 }

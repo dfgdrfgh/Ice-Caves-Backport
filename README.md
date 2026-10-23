@@ -1,19 +1,45 @@
-# Ice Caves 1.21.1 — recovered Java source
+# Ice Caves Backport — Fabric 1.21.1 (experimental merge)
 
-This archive contains **actual Java method bodies** recovered using Vineflower 1.12.0 from the supplied `IceCaves-1.21.1(1).jar`. Unlike a class-signature dump, this is a real bytecode decompilation.
+Work-in-progress combined source project using the original recovered Zerw Ice Caves 1.21.1 implementation and independently adapted mechanics from the CC0 Bananaman 0.1.7 backport.
 
-## Contents
+**Experimental:** compilation has succeeded in GitHub Actions; in-game/world-generation compatibility is not yet verified. Do not replace a known-good modpack JAR or open an important world without a backup.
 
-- `src/main/java/`: **90** decompiled `.java` files corresponding to the **96** original `.class` files. The difference is due to Java nested / synthetic classes whose code appears within the parent source, and an additional named nested source output.
-- `src/main/resources/`: **210** files retained unmodified from the input JAR (textures, sound files, data, mixin configurations, loader metadata, license, etc.).
-- `DECOMPILATION_REPORT.json`: input SHA-256, file manifest and a source-coverage check.
+## Current combined features
 
-## Important development notes
+- Ice Crystal, icicles, Brittle Ice, Packed Ice building blocks and Ice Door assets from the original recovered mod.
+- Frostbite, Ice Balls and Freezing potions/arrows, with gradual freezing, velocity-dependent impact damage, ranged AI, powder-snow conversion, and Brittle Ice exemptions.
+- Water next to Blue Ice forms Brittle Ice; snow layers may sit on Packed Ice.
+- Nine added Packed Ice stonecutter recipes and a Frostbite/Ice Ball advancement.
+- Existing jukebox chest playlists preserved.
+- Correct baseline (45s/90s) Freezing potions; brewing ingredient changed to Ice Balls.
+- Arrow tint/model adjustments to make Freezing arrow appearances consistent.
+- Spawn filtering constrained to locations with actual nearby Ice Cave blocks rather than entire underground cold biomes.
 
-- This is a **source recovery**, not a reconstructed or verified buildable Fabric/Forge/NeoForge Gradle project. Original `build.gradle`, dependency versions and project configuration cannot be fully recovered from a compiled JAR.
-- The input JAR contains **Fabric, Forge, and NeoForge** components and metadata together. Those targets may need to be separated into source sets or Gradle modules if you want to rebuild the mod.
-- The Fabric classes use Minecraft **intermediary mapping names** such as `class_3031` and `method_13151`; to edit against named Yarn mappings, remapping and project setup would be required. Compiling will also require the correct Minecraft version, mappings, loader APIs and dependencies.
-- Decompiled source does not necessarily match the original author's formatting, comments, local variable names or some synthetic structures, and may require manual fixes to compile.
-- No Minecraft launch, modpack test, or compile test was performed here. This output was checked for recovery coverage, not gameplay compatibility.
+## Worldgen / compatibility
 
-Original mod license, where included, is preserved at `src/main/resources/LICENSE_Ice Caves`. Respect its terms when redistributing source or derivatives.
+The standalone mod **does not yet add a real** `minecraft:ice_caves` biome. It retains the original mod's decorated-cave approach in tagged cold biomes.
+
+**Intentionally excluded:** Bananaman's global biome-climate mutations, TerraBlender default-region mixins and terrain-changing code. Those were implicated in user-reported floating-island terrain and crashes when paired with TrueVanillaBackport. A biome integration must first be designed around deterministic seed and mod compatibility testing.
+
+The separate Ice Caves mods must not be installed alongside this merged mod: they register overlapping content.
+
+## Building
+
+GitHub Actions > **Fabric 1.21.1 merged source build** builds the mod with Java 21, Fabric Loom and Gradle 8.11.1, then uploads its JARs as an artifact.
+
+Build setup uses `net.minecraft.class_...` (intermediary-named) source recovered by Vineflower and a temporary identity intermediary->named mapping generated in CI. The original JAR included Forge and NeoForge files, excluded from the Fabric build.
+
+## Verification
+
+- Java compilation and mod JAR packaging passed in GitHub Actions.
+- Automated dedicated-server startup smoke testing is being added to detect runtime mixin or registry failures.
+- In-game behavior, client rendering, full modpack compatibility and fixed-seed worldgen comparison remain untested.
+- The latest complete user modpack is not available in this session.
+
+See `MERGE_PROGRESS.md` for details and outstanding work.
+
+## Licensing
+
+The original recovered Zerw Ice Caves assets/code included the license at `src/main/resources/LICENSE_Ice Caves` (All Rights Reserved). This remains subject to the original author's conditions. Additional gameplay approaches/reference material from Bananaman 0.1.7 were published under CC0-1.0; CC0 does not override Zerw's license.
+
+This is source restoration and a user-requested experimental merge, **not** a statement of permission to redistribute third-party All Rights Reserved assets/source.

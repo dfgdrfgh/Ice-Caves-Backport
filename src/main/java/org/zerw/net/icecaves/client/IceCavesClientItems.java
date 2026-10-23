@@ -10,11 +10,8 @@ public final class IceCavesClientItems {
    }
 
    public static int potionItemColor(class_1799 stack, int tintIndex) {
-      if (ModPotions.isFreezing(stack) || ModPotions.hasFreezingModel(stack)) {
-         return -1;
-      } else {
-         return tintIndex > 0 ? -1 : ((class_1844)stack.method_57825(class_9334.field_49651, class_1844.field_49274)).method_8064();
-      }
+      // Always use the potion's real tint so crafted and creative Freezing arrows look identical.
+      return tintIndex > 0 ? -1 : ((class_1844)stack.method_57825(class_9334.field_49651, class_1844.field_49274)).method_8064();
    }
 
    public static int spawnEggItemColor(class_1799 stack, int tintIndex) {

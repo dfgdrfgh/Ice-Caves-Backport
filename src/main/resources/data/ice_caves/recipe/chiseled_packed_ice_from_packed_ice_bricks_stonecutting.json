@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ice_caves:packed_ice_bricks"
+  },
+  "result": {
+    "id": "ice_caves:chiseled_packed_ice",
+    "count": 1
+  }
+}

@@ -18,3 +18,9 @@ Comparison/reference: Bananaman Ice Caves 0.1.7 (CC0-1.0).
 - Complete pack unavailable; no Minecraft game-run claimed.
 
 No release should be considered stable before those checks.
+
+## Additional integration
+- Brew Freezing potion with Ice Ball instead of Ice Crystal.
+- Use the standard tinted arrow model for Freezing arrows; fixed effect tint.
+- Added 9 stonecutting recipes for packed-ice family.
+- Added the Frostbite/Ice Ball advancement, adapted to the standalone mod namespace.

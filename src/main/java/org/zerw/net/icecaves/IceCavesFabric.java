@@ -161,7 +161,7 @@ public final class IceCavesFabric implements ModInitializer {
       FREEZING_POTION = class_2378.method_47985(class_7923.field_41179, ModPotions.FREEZING_ID, ModPotions.createFreezing(FREEZING_EFFECT));
       LONG_FREEZING_POTION = class_2378.method_47985(class_7923.field_41179, ModPotions.LONG_FREEZING_ID, ModPotions.createLongFreezing(FREEZING_EFFECT));
       FabricBrewingRecipeRegistryBuilder.BUILD.register((BuildCallback)builder -> {
-         builder.method_59705(class_1847.field_8999, ICE_CRYSTAL_ITEM, FREEZING_POTION);
+         builder.method_59705(class_1847.field_8999, ICE_BALL_ITEM, FREEZING_POTION);
          builder.method_59705(FREEZING_POTION, class_1802.field_8725, LONG_FREEZING_POTION);
       });
       class_1761 tab = FabricItemGroup.builder()

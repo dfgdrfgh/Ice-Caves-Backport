@@ -5,11 +5,11 @@ import net.minecraft.class_1309;
 import net.minecraft.class_4081;
 
 public final class FreezingMobEffect extends class_1291 {
-   private static final int COLOR = 7260415;
+   private static final int COLOR = 10875635;
    private static final int HURT_INTERVAL_TICKS = 20;
 
    public FreezingMobEffect() {
-      super(class_4081.field_18272, 7260415);
+      super(class_4081.field_18272, 10875635);
    }
 
    public void method_52520(class_1309 mob, int amplification) {

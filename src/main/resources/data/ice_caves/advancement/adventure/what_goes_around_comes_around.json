@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:adventure/kill_a_mob",
+  "criteria": {
+    "kill_frostbite_with_ice_ball": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "ice_caves:frostbite"
+        },
+        "killing_blow": {
+          "direct_entity": {
+            "type": "ice_caves:ice_ball"
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "text": "Defeat a Frostbite with an Ice Ball"
+    },
+    "icon": {
+      "id": "ice_caves:ice_ball"
+    },
+    "title": {
+      "text": "What Goes Around Comes Around"
+    }
+  },
+  "requirements": [
+    [
+      "kill_frostbite_with_ice_ball"
+    ]
+  ]
+}

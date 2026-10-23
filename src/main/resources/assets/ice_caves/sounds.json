@@ -1,0 +1,173 @@
+{
+  "entity.ice_ball.hit": {
+    "subtitle": "subtitles.entity.ice_ball.hit",
+    "sounds": [
+      "ice_caves:entity/ice_ball/hit1",
+      "ice_caves:entity/ice_ball/hit2",
+      "ice_caves:entity/ice_ball/hit3",
+      "ice_caves:entity/ice_ball/hit4"
+    ]
+  },
+  "block.ice.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "ice_caves:block/ice/break1",
+      "ice_caves:block/ice/break2",
+      "ice_caves:block/ice/break3",
+      "ice_caves:block/ice/break4",
+      "ice_caves:block/ice/break5",
+      "ice_caves:block/ice/break6"
+    ]
+  },
+  "block.ice.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "ice_caves:block/ice/step1",
+      "ice_caves:block/ice/step2",
+      "ice_caves:block/ice/step3",
+      "ice_caves:block/ice/step4",
+      "ice_caves:block/ice/step5",
+      "ice_caves:block/ice/step6"
+    ]
+  },
+  "block.ice.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "ice_caves:block/ice/place1",
+      "ice_caves:block/ice/place2",
+      "ice_caves:block/ice/place3",
+      "ice_caves:block/ice/place4",
+      "ice_caves:block/ice/place5",
+      "ice_caves:block/ice/place6"
+    ]
+  },
+  "block.ice.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "ice_caves:block/ice/hit1",
+      "ice_caves:block/ice/hit2",
+      "ice_caves:block/ice/hit3",
+      "ice_caves:block/ice/hit4",
+      "ice_caves:block/ice/hit5"
+    ]
+  },
+  "block.ice.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "ice_caves:block/ice/hit1",
+      "ice_caves:block/ice/hit2",
+      "ice_caves:block/ice/hit3",
+      "ice_caves:block/ice/hit4",
+      "ice_caves:block/ice/hit5"
+    ]
+  },
+  "block.ice_crystal.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "ice_caves:block/ice_crystal/break1",
+      "ice_caves:block/ice_crystal/break2",
+      "ice_caves:block/ice_crystal/break3",
+      "ice_caves:block/ice_crystal/break4",
+      "ice_caves:block/ice_crystal/break5"
+    ]
+  },
+  "block.ice_crystal.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "ice_caves:block/ice_crystal/step1",
+      "ice_caves:block/ice_crystal/step2",
+      "ice_caves:block/ice_crystal/step3",
+      "ice_caves:block/ice_crystal/step4",
+      "ice_caves:block/ice_crystal/step5"
+    ]
+  },
+  "block.ice_crystal.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "ice_caves:block/ice_crystal/place1",
+      "ice_caves:block/ice_crystal/place2",
+      "ice_caves:block/ice_crystal/place3",
+      "ice_caves:block/ice_crystal/place4",
+      "ice_caves:block/ice_crystal/place5"
+    ]
+  },
+  "block.ice_crystal.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "ice_caves:block/ice_crystal/hit1",
+      "ice_caves:block/ice_crystal/hit2",
+      "ice_caves:block/ice_crystal/hit3",
+      "ice_caves:block/ice_crystal/hit4",
+      "ice_caves:block/ice_crystal/hit5"
+    ]
+  },
+  "block.ice_crystal.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "ice_caves:block/ice_crystal/hit1",
+      "ice_caves:block/ice_crystal/hit2",
+      "ice_caves:block/ice_crystal/hit3",
+      "ice_caves:block/ice_crystal/hit4",
+      "ice_caves:block/ice_crystal/hit5"
+    ]
+  },
+  "entity.frostbite.ambient": {
+    "subtitle": "subtitles.entity.frostbite.ambient",
+    "sounds": [
+      "ice_caves:mob/frostbite/ambient1",
+      "ice_caves:mob/frostbite/ambient2",
+      "ice_caves:mob/frostbite/ambient3",
+      "ice_caves:mob/frostbite/ambient4"
+    ]
+  },
+  "entity.frostbite.converted_to_zombie": {
+    "subtitle": "subtitles.entity.frostbite.converted_to_zombie",
+    "sounds": [
+      "ice_caves:mob/frostbite/convert1",
+      "ice_caves:mob/frostbite/convert2"
+    ]
+  },
+  "entity.frostbite.death": {
+    "subtitle": "subtitles.entity.frostbite.death",
+    "sounds": [
+      "ice_caves:mob/frostbite/death"
+    ]
+  },
+  "entity.frostbite.hurt": {
+    "subtitle": "subtitles.entity.frostbite.hurt",
+    "sounds": [
+      "ice_caves:mob/frostbite/hurt1",
+      "ice_caves:mob/frostbite/hurt2",
+      "ice_caves:mob/frostbite/hurt3",
+      "ice_caves:mob/frostbite/hurt4"
+    ]
+  },
+  "entity.frostbite.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "ice_caves:mob/frostbite/step1",
+      "ice_caves:mob/frostbite/step2",
+      "ice_caves:mob/frostbite/step3",
+      "ice_caves:mob/frostbite/step4",
+      "ice_caves:mob/frostbite/step5"
+    ]
+  },
+  "block.ice_door.open": {
+    "subtitle": "subtitles.block.ice_door.toggle",
+    "sounds": [
+      {
+        "name": "ice_caves:block/ice_door/open",
+        "volume": 0.7
+      }
+    ]
+  },
+  "block.ice_door.close": {
+    "subtitle": "subtitles.block.ice_door.toggle",
+    "sounds": [
+      {
+        "name": "ice_caves:block/ice_door/close",
+        "volume": 0.7
+      }
+    ]
+  }
+}

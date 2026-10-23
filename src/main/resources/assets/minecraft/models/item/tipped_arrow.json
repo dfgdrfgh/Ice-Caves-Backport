@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/tipped_arrow_head",
+    "layer1": "minecraft:item/tipped_arrow_base"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "ice_caves:item/arrow_of_freezing"
+    }
+  ]
+}

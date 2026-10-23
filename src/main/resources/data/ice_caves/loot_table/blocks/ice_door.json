@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ice_caves:ice_door",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ice_caves:ice_door",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "ice_caves:blocks/ice_door"
+}

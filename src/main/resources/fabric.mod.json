@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "ice_caves",
+  "version": "1.0.0",
+  "name": "Ice Caves",
+  "description": "Ice Caves adds icy blocks and items for frozen caves exploration.",
+  "authors": [
+    "zerw"
+  ],
+  "license": "All-Rights-Reserved",
+  "icon": "ice_caves.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.zerw.net.icecaves.IceCavesFabric"
+    ],
+    "client": [
+      "org.zerw.net.icecaves.client.IceCavesFabricClient"
+    ]
+  },
+  "mixins": [
+    "ice_caves.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21.1",
+    "java": ">=21"
+  }
+}

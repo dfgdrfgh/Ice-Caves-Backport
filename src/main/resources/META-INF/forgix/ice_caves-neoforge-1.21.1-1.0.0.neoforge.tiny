@@ -1,0 +1,27 @@
+tiny	2	0	original	relocated
+c	org/zerw/net/icecaves/entity/IceBall	org/zerw/net/icecaves/entity/IceBall_forge
+c	org/zerw/net/icecaves/worldgen/IceCaveFeature	org/zerw/net/icecaves/worldgen/IceCaveFeature_forge
+c	org/zerw/net/icecaves/registry/ModEffects	org/zerw/net/icecaves/registry/ModEffects_forge
+c	org/zerw/net/icecaves/registry/ModFeatures	org/zerw/net/icecaves/registry/ModFeatures_forge
+c	org/zerw/net/icecaves/block/JukeboxChestPlaylist$Access	org/zerw/net/icecaves/block/JukeboxChestPlaylist$Access_forge
+c	org/zerw/net/icecaves/client/IceCavesClientItems	org/zerw/net/icecaves/client/IceCavesClientItems_forge
+c	org/zerw/net/icecaves/client/FrostbiteBabyModel	org/zerw/net/icecaves/client/FrostbiteBabyModel_forge
+c	org/zerw/net/icecaves/block/IcicleBlock	org/zerw/net/icecaves/block/IcicleBlock_forge
+c	org/zerw/net/icecaves/registry/ModBlocks	org/zerw/net/icecaves/registry/ModBlocks_forge
+c	org/zerw/net/icecaves/effect/FreezingMobEffect	org/zerw/net/icecaves/effect/FreezingMobEffect_forge
+c	org/zerw/net/icecaves/registry/ModSounds	org/zerw/net/icecaves/registry/ModSounds_forge
+c	org/zerw/net/icecaves/item/IceBallItem	org/zerw/net/icecaves/item/IceBallItem_forge
+c	org/zerw/net/icecaves/item/FrostbiteSpawnEggItem	org/zerw/net/icecaves/item/FrostbiteSpawnEggItem_forge
+c	org/zerw/net/icecaves/IceCavesConstants	org/zerw/net/icecaves/IceCavesConstants_forge
+c	org/zerw/net/icecaves/effect/FreezingMobEffect$1	org/zerw/net/icecaves/effect/FreezingMobEffect$1_forge
+c	org/zerw/net/icecaves/client/FrostbiteZombieRenderer	org/zerw/net/icecaves/client/FrostbiteZombieRenderer_neoforge
+c	org/zerw/net/icecaves/registry/ModItems	org/zerw/net/icecaves/registry/ModItems_forge
+c	org/zerw/net/icecaves/registry/ModPotions	org/zerw/net/icecaves/registry/ModPotions_forge
+c	org/zerw/net/icecaves/worldgen/IceCaveSpawnControl	org/zerw/net/icecaves/worldgen/IceCaveSpawnControl_forge
+c	org/zerw/net/icecaves/entity/FrostbiteZombie	org/zerw/net/icecaves/entity/FrostbiteZombie_forge
+c	org/zerw/net/icecaves/block/JukeboxChestPlaylist	org/zerw/net/icecaves/block/JukeboxChestPlaylist_forge
+c	org/zerw/net/icecaves/registry/ModEntities	org/zerw/net/icecaves/registry/ModEntities_forge
+c	org/zerw/net/icecaves/client/FrostbiteOuterLayer	org/zerw/net/icecaves/client/FrostbiteOuterLayer_forge
+c	org/zerw/net/icecaves/block/BrittleIceBlock	org/zerw/net/icecaves/block/BrittleIceBlock_forge
+c	org/zerw/net/icecaves/IceCavesCommon	org/zerw/net/icecaves/IceCavesCommon_forge
+c	org/zerw/net/icecaves/registry/ModCreativeTabs	org/zerw/net/icecaves/registry/ModCreativeTabs_forge

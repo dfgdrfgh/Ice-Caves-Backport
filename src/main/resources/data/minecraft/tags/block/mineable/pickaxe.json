@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "ice_caves:packed_ice_bricks",
+    "ice_caves:packed_ice_brick_stairs",
+    "ice_caves:packed_ice_brick_slab",
+    "ice_caves:packed_ice_brick_wall",
+    "ice_caves:chiseled_packed_ice",
+    "ice_caves:ice_door"
+  ]
+}

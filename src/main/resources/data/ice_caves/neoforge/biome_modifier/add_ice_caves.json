@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#ice_caves:has_ice_caves",
+  "features": "ice_caves:ice_cave",
+  "step": "underground_decoration"
+}

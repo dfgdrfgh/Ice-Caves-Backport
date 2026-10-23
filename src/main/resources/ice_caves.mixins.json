@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.zerw.net.icecaves.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "IceBlockMixin",
+    "JukeboxBlockPlaylistMixin",
+    "JukeboxPlaylistMixin",
+    "JukeboxSongPlayerMixin",
+    "MobSpawnMixin",
+    "PotionBrewingMixin",
+    "SnowballMixin",
+    "SpawnPlacementsInvoker",
+    "SpawnPlacementsMixin",
+    "TippedArrowRecipeMixin"
+  ],
+  "client": [
+    "NoteParticleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "ice_caves-fabric-1.21.1-refmap.json"
+}

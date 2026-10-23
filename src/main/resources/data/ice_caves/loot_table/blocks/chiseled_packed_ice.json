@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ice_caves:chiseled_packed_ice"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "ice_caves:blocks/chiseled_packed_ice"
+}

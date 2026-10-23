@@ -1,0 +1,6 @@
+{
+  "parent": "ice_caves:block/icicle_up",
+  "textures": {
+    "cross": "ice_caves:block/icicle_up_base"
+  }
+}

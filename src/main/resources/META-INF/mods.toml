@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[52,)"
+license="All-Rights-Reserved"
+
+[[mixins]]
+config="ice_caves.forge.mixins.json"
+
+[[mods]]
+modId="ice_caves"
+version="1.0.0"
+displayName="Ice Caves"
+logoFile="ice_caves.png"
+credits=""
+authors="zerw"
+description='''Ice Caves adds icy blocks and items for frozen caves exploration.'''
+
+[[dependencies.ice_caves]]
+    modId="forge"
+    mandatory=true
+    versionRange="[52.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.ice_caves]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21.1,1.22)"
+    ordering="NONE"
+    side="BOTH"

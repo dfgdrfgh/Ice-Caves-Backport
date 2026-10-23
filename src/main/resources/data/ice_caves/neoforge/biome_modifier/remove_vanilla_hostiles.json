@@ -1,0 +1,5 @@
+{
+  "type": "neoforge:remove_spawns",
+  "biomes": "#ice_caves:has_ice_caves",
+  "entity_types": "#ice_caves:blocked_ice_cave_hostiles"
+}

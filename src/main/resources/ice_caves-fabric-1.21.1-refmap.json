@@ -1,0 +1,80 @@
+{
+  "mappings": {
+    "org/zerw/net/icecaves/mixin/IceBlockMixin": {
+      "getSoundType": "Lnet/minecraft/class_4970;method_9573(Lnet/minecraft/class_2680;)Lnet/minecraft/class_2498;"
+    },
+    "org/zerw/net/icecaves/mixin/JukeboxBlockPlaylistMixin": {
+      "getTicker": "Lnet/minecraft/class_2387;method_31645(Lnet/minecraft/class_1937;Lnet/minecraft/class_2680;Lnet/minecraft/class_2591;)Lnet/minecraft/class_5558;",
+      "useWithoutItem": "Lnet/minecraft/class_2387;method_55766(Lnet/minecraft/class_2680;Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_1657;Lnet/minecraft/class_3965;)Lnet/minecraft/class_1269;"
+    },
+    "org/zerw/net/icecaves/mixin/JukeboxPlaylistMixin": {
+      "loadAdditional": "Lnet/minecraft/class_2619;method_11014(Lnet/minecraft/class_2487;Lnet/minecraft/class_7225$class_7874;)V",
+      "saveAdditional": "Lnet/minecraft/class_2619;method_11007(Lnet/minecraft/class_2487;Lnet/minecraft/class_7225$class_7874;)V",
+      "tick": "Lnet/minecraft/class_2619;method_44370(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_2680;Lnet/minecraft/class_2619;)V"
+    },
+    "org/zerw/net/icecaves/mixin/JukeboxSongPlayerMixin": {
+      "spawnMusicParticles": "Lnet/minecraft/class_9794;method_60756(Lnet/minecraft/class_1936;Lnet/minecraft/class_2338;)V"
+    },
+    "org/zerw/net/icecaves/mixin/MobSpawnMixin": {
+      "checkSpawnRules": "Lnet/minecraft/class_1308;method_5979(Lnet/minecraft/class_1936;Lnet/minecraft/class_3730;)Z"
+    },
+    "org/zerw/net/icecaves/mixin/NoteParticleMixin": {
+      "createParticle": "Lnet/minecraft/class_698$class_699;method_3041(Lnet/minecraft/class_2400;Lnet/minecraft/class_638;DDDDDD)Lnet/minecraft/class_703;"
+    },
+    "org/zerw/net/icecaves/mixin/PotionBrewingMixin": {
+      "mix": "Lnet/minecraft/class_1845;method_8078(Lnet/minecraft/class_1799;Lnet/minecraft/class_1799;)Lnet/minecraft/class_1799;"
+    },
+    "org/zerw/net/icecaves/mixin/SnowballMixin": {
+      "onHitEntity": "Lnet/minecraft/class_1680;method_7454(Lnet/minecraft/class_3966;)V"
+    },
+    "org/zerw/net/icecaves/mixin/SpawnPlacementsInvoker": {
+      "register": "method_20637(Lnet/minecraft/class_1299;Lnet/minecraft/class_9168;Lnet/minecraft/class_2902$class_2903;Lnet/minecraft/class_1317$class_4306;)V"
+    },
+    "org/zerw/net/icecaves/mixin/SpawnPlacementsMixin": {
+      "checkSpawnRules": "Lnet/minecraft/class_1317;method_20638(Lnet/minecraft/class_1299;Lnet/minecraft/class_5425;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+    },
+    "org/zerw/net/icecaves/mixin/TippedArrowRecipeMixin": {
+      "assemble(Lnet/minecraft/world/item/crafting/CraftingInput;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/ItemStack;": "Lnet/minecraft/class_1876;method_17740(Lnet/minecraft/class_9694;Lnet/minecraft/class_7225$class_7874;)Lnet/minecraft/class_1799;"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "org/zerw/net/icecaves/mixin/IceBlockMixin": {
+        "getSoundType": "Lnet/minecraft/class_4970;method_9573(Lnet/minecraft/class_2680;)Lnet/minecraft/class_2498;"
+      },
+      "org/zerw/net/icecaves/mixin/JukeboxBlockPlaylistMixin": {
+        "getTicker": "Lnet/minecraft/class_2387;method_31645(Lnet/minecraft/class_1937;Lnet/minecraft/class_2680;Lnet/minecraft/class_2591;)Lnet/minecraft/class_5558;",
+        "useWithoutItem": "Lnet/minecraft/class_2387;method_55766(Lnet/minecraft/class_2680;Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_1657;Lnet/minecraft/class_3965;)Lnet/minecraft/class_1269;"
+      },
+      "org/zerw/net/icecaves/mixin/JukeboxPlaylistMixin": {
+        "loadAdditional": "Lnet/minecraft/class_2619;method_11014(Lnet/minecraft/class_2487;Lnet/minecraft/class_7225$class_7874;)V",
+        "saveAdditional": "Lnet/minecraft/class_2619;method_11007(Lnet/minecraft/class_2487;Lnet/minecraft/class_7225$class_7874;)V",
+        "tick": "Lnet/minecraft/class_2619;method_44370(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_2680;Lnet/minecraft/class_2619;)V"
+      },
+      "org/zerw/net/icecaves/mixin/JukeboxSongPlayerMixin": {
+        "spawnMusicParticles": "Lnet/minecraft/class_9794;method_60756(Lnet/minecraft/class_1936;Lnet/minecraft/class_2338;)V"
+      },
+      "org/zerw/net/icecaves/mixin/MobSpawnMixin": {
+        "checkSpawnRules": "Lnet/minecraft/class_1308;method_5979(Lnet/minecraft/class_1936;Lnet/minecraft/class_3730;)Z"
+      },
+      "org/zerw/net/icecaves/mixin/NoteParticleMixin": {
+        "createParticle": "Lnet/minecraft/class_698$class_699;method_3041(Lnet/minecraft/class_2400;Lnet/minecraft/class_638;DDDDDD)Lnet/minecraft/class_703;"
+      },
+      "org/zerw/net/icecaves/mixin/PotionBrewingMixin": {
+        "mix": "Lnet/minecraft/class_1845;method_8078(Lnet/minecraft/class_1799;Lnet/minecraft/class_1799;)Lnet/minecraft/class_1799;"
+      },
+      "org/zerw/net/icecaves/mixin/SnowballMixin": {
+        "onHitEntity": "Lnet/minecraft/class_1680;method_7454(Lnet/minecraft/class_3966;)V"
+      },
+      "org/zerw/net/icecaves/mixin/SpawnPlacementsInvoker": {
+        "register": "method_20637(Lnet/minecraft/class_1299;Lnet/minecraft/class_9168;Lnet/minecraft/class_2902$class_2903;Lnet/minecraft/class_1317$class_4306;)V"
+      },
+      "org/zerw/net/icecaves/mixin/SpawnPlacementsMixin": {
+        "checkSpawnRules": "Lnet/minecraft/class_1317;method_20638(Lnet/minecraft/class_1299;Lnet/minecraft/class_5425;Lnet/minecraft/class_3730;Lnet/minecraft/class_2338;Lnet/minecraft/class_5819;)Z"
+      },
+      "org/zerw/net/icecaves/mixin/TippedArrowRecipeMixin": {
+        "assemble(Lnet/minecraft/world/item/crafting/CraftingInput;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/ItemStack;": "Lnet/minecraft/class_1876;method_17740(Lnet/minecraft/class_9694;Lnet/minecraft/class_7225$class_7874;)Lnet/minecraft/class_1799;"
+      }
+    }
+  }
+}

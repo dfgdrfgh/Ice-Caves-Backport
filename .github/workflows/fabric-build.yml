@@ -25,6 +25,31 @@ jobs:
           python3 .github/scripts/make_named_intermediary.py /tmp/intermediary-1.21.1-v2.jar mapping/intermediary-named.jar
       - name: Compile and package
         run: gradle build --stacktrace --no-daemon
+      - name: Smoke test dedicated server startup
+        shell: bash
+        run: |
+          mkdir -p run
+          printf 'eula=true\n' > run/eula.txt
+          set +e
+          timeout --signal=TERM 140s gradle runServer --no-daemon --console=plain > server-smoke.log 2>&1
+          status=$?
+          set -e
+          if ! grep -Eq 'Done \(.*\)! For help' run/logs/latest.log 2>/dev/null; then
+            echo "Dedicated server did not complete startup (exit: $status)."
+            tail -n 250 server-smoke.log || true
+            test ! -f run/logs/latest.log || tail -n 250 run/logs/latest.log
+            exit 1
+          fi
+          echo "Dedicated server startup message verified (exit: $status)."
+      - name: Upload startup logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-smoke-debug
+          path: |
+            server-smoke.log
+            run/logs/**
+            run/crash-reports/**
       - uses: actions/upload-artifact@v4
         if: success()
         with:

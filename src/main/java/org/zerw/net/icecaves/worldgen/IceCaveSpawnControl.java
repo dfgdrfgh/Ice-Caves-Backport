@@ -108,11 +108,13 @@ public final class IceCaveSpawnControl {
          level.method_8624(class_2903.field_13202, pos.method_10263(), pos.method_10260()),
          level.method_8624(class_2903.field_13197, pos.method_10263(), pos.method_10260())
       );
+      // Biome tags name the eligible *surface biome*, not actual cave biomes.
+      // Requiring nearby cave material prevents stripping ordinary underground
+      // monster spawns across all snowy biomes (including WWOO snowy biomes).
       if (pos.method_10264() >= surfaceY - 1) {
          return false;
-      } else {
-         return pos.method_10264() < surfaceY - 3 ? true : countNearbyIceCaveBlocks(level, pos) >= 3;
       }
+      return countNearbyIceCaveBlocks(level, pos) >= 3;
    }
 
    private static int countNearbyIceCaveBlocks(class_1936 level, class_2338 pos) {

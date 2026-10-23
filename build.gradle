@@ -12,7 +12,8 @@ repositories {
 }
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    // Decompiled source uses intermediary identifiers; CI generates a tiny mapping with named=intermediary.\n    mappings files("mapping/intermediary-named.jar")
+    // Decompiled source uses intermediary identifiers; CI generates a tiny mapping with named=intermediary.
+    mappings files("mapping/intermediary-named.jar")
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     compileOnly 'com.google.code.findbugs:jsr305:3.0.2'

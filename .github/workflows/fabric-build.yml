@@ -23,6 +23,8 @@ jobs:
             'https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.1/intermediary-1.21.1-v2.jar' \
             --output /tmp/intermediary-1.21.1-v2.jar
           python3 .github/scripts/make_named_intermediary.py /tmp/intermediary-1.21.1-v2.jar mapping/intermediary-named.jar
+      - name: Validate Mixin package layout
+        run: python3 .github/scripts/check_mixin_package.py
       - name: Compile and package
         run: gradle build --stacktrace --no-daemon
       - name: Smoke test dedicated server startup

@@ -1,5 +1,7 @@
 package org.zerw.net.icecaves.mixin;
 
+import org.zerw.net.icecaves.hooks.IceCavesMixinLogic;
+
 import net.minecraft.class_2246;
 import net.minecraft.class_2338;
 import net.minecraft.class_2488;

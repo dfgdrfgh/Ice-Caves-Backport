@@ -1,4 +1,4 @@
-package org.zerw.net.icecaves.mixin;
+package org.zerw.net.icecaves.hooks;
 
 import net.minecraft.class_1297;
 import net.minecraft.class_1299;

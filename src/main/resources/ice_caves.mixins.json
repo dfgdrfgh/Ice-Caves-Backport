@@ -13,7 +13,10 @@
     "SnowballMixin",
     "SpawnPlacementsInvoker",
     "SpawnPlacementsMixin",
-    "TippedArrowRecipeMixin"
+    "TippedArrowRecipeMixin",
+    "WaterOnBlueIceMixin",
+    "SnowLayerBlockMixin",
+    "ZombieMixin"
   ],
   "client": [
     "NoteParticleMixin"
